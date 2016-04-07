@@ -1,2 +1,8 @@
-No leagues yet!
-<a href ='#'>Add a league</a>
+<% if @leagues.any? %>
+  <% @leagues.each do |league| %>
+    <h2> <%= league.name %> </h2>
+  <% end %>
+<% else %>
+  No leagues yet
+<% end %>
+<a href ='leagues/new'>Add a league</a>
